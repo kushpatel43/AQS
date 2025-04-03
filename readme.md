@@ -1,12 +1,10 @@
-### Step 1: Install System Dependencies
+## Install System Dependencies
 
-Since you're on **Fedora**, first update your system:
+For **Fedora**,( if using **ubuntu/wsl** use **apt** instead of **dnf** )
 
-sh
-
-CopyEdit
-
-`sudo dnf update -y`
+```shell
+sudo dnf update -y
+```
 
 #### Install Python & Pip
 
@@ -44,3 +42,8 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
+### For Postgress (Authintication Issue)
+
+Edit `pg_hba.conf` at `\etc\postgress\data` or `\var\lib\pgsql\data`
+
+change host to **md5**
